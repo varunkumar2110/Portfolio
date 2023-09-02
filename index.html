@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/a9c9c67bbf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/V.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="opemenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Tech-savvy!</p>
+                <h1>Hey I'm <span>Varun</span> studying at Chitkara University.<br>"Welcome to my creative world, where Imagination meets <span>Innovation</span>."</h1>
+            </div>
+        </div>
+    </div>
+<!-------------------------------------------------------about----------------->
+    <div id="about">
+        <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/ME.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>A self driven and dedciated second year CSE student. I am passionate about exploring the dynamic world of technology. I am skilled at analyzing data, solving problems and proficient in English speaking. Seeking opportunities in the field of technology.</p>
+           <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+            <p class="tab-links" onclick="opentab('hobbies')">Hobbies & Interests</p>
+           </div>
+           <div class="tab-contents active-tab" id="skills">
+            <ul>
+                <li><span>Microsoft Office</span></li>
+                <li><span>Programming in C</span></li>
+                <li><span>Web Development</span></li>
+                <li><span>Project Management</span></li>
+                <li><span>Communication</span></li>
+                <li><span>Problem Solving</span></li>
+                <li><span>Team Work</span></li>
+                <li><span>Working Under Pressure</span></li>
+                <li><span>Adaptability</span></li>
+                <li><span>Creativity</span></li>
+                <li><span>Time Management</span></li>
+                <li><span>Active Listening</span></li>
+                <li><span>Presentation Skills</span></li>
+            </ul>
+           </div>
+           <div class="tab-contents" id="education">
+            <ul>
+                <li><span>CSE, Chitkara University (2022-2025)</span><br>Academic Marks<br>1 Sem: 8.31 CGPA<br>2 Sem: 8.32 CGPA</li>
+                <li><span>12th, D.A.V Public School(2022)</span><br>Academic Marks: 77%</li>
+                <li><span>10th, D.A.V Public School(2020)</span><br>Academic Marks: 75%</li>
+            </ul>
+           </div>
+           <div class="tab-contents" id="hobbies">
+            <ul>
+<li><span>Fitness</span></li>
+<li><span>Writing</span></li>
+<li><span>Technology</span></li>
+<li><span>Music</span></li>
+<li><span>Content Creation</span></li>
+<li><span>Gaming</span></li>
+            </ul>
+        </div>
+            </div>
+            </div>
+        </div>
+    </div>
+<!---------------------------------Contact me-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>varun.mnd56@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+918352992160</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/varun_kumar.21/champ.mini.77"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/varun_kumar.21/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/varun-kumar-442604252"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="http://discordapp.com/users/550999871318917149"><i class="fa-brands fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="Submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Varun Made with <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        var sidemenu = document.getElementById("sidemenu");
+        function opemenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbywzLt7qgsUmwZho0v08HMzLhsOPpSTWRTavbvrf-QGtgkQx6ZiCgVJ9QQR1b8xmPTt/exec'
+        const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },3000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
